@@ -1,19 +1,3 @@
-// Assignment Code
-// var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
-
-// Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-
-
 function promptBtn() {
   let buttonPress = alert("Let's make a Password!");
 
@@ -118,68 +102,36 @@ function promptBtn() {
 
     console.log(combined);
 
-
+    // If statement for if characters ARE picked gets us to the next step
     if (combined !== "") {
 
-      var password = ""
-      for (let i = 0; i < passLength; i++) {
-        let randomized = combined.charAt(Math.floor(Math.random() * combinedLength));
-        password = (password + randomized)
-      }
-
+      // Declaring the password Variable and Printing it to the Page!
 
       var password = ""
       for (let i = 0; i < passLength; i++) {
         let randomized = combined.charAt(Math.floor(Math.random() * combinedLength));
         password = (password + randomized)
       }
-      // }
+
       console.log(password)
+      // Printing Password to the page and changing color and text size of box
       document.getElementById("password").textContent = password;
       document.getElementById("password").style.fontSize = "30px";
       document.getElementById("password").style.padding = "50px";
-      document.getElementById("password").style.color = "black";
+      document.getElementById("password").style.color = "white";
       document.getElementById("password").style.backgroundColor = "darkred"
 
+      // Else Statement for if NO Characters are selected
     } else {
       let noPassword = "No password criteria selected.  Please try again"
       document.getElementById("password").textContent = noPassword
       document.getElementById("password").style.fontSize = "20px";
       document.getElementById("password").style.color = "black";
     }
+    // Else Statement for if wrong number of password Characters is picked
   } else {
     alert("Must choose a length between 8 and 128 characters");
   }
-
-
-  // var passLength = prompt("How long would you like your password to be (must be between 8 and 128 characters?");
-  // if (passLength >= 8 && passLength <= 128) {
-  //   alert(`Your password is going to be ${passLength} characters long`);
-  //   document.getElementById("password").textContent = password;
-  //   document.getElementById("password").style.fontSize = "40px";
-  //   document.getElementById("password").style.padding = "50px";
-  //   document.getElementById("password").style.color = "blue";
-  // } else {
-  //   alert("Must choose a length between 8 and 128 characters");
-  // }
-
-
-  // }
-
-
-
-
-
-  // Else Statement for if ANY criteria selected to Make the password
-
-  // Empty String for the Password
-  // var password = ""
-  // For Loop To Randomize the chosen Options and Make the Correct Lenfth
-  // for (let i = 0; i < passLength; i++) {
-  //   let randomized = combined.charAt(Math.floor(Math.random() * combinedLength));
-  //   password = (password + randomized)
-  // }
-
-
+  // Return the Function
   return (buttonPress)
 }
