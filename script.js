@@ -82,5 +82,30 @@ function promptBtn() {
   }
 
   console.log(symbolPassword);
+
+
+  // Numbers
+
+  // Create and Empty String to have Numbers
+  var numberPassword = ""
+  // Confirm for an alert asking if you want Numbers
+  let numberChar = confirm("Would you like your password to contain numbers?");
+  // If Statement for if they Want Numbers, and then Randomize Those Letters
+  if (numberChar === true) {
+    let numberPassOptions = "01234567890123456789";
+    // Randomize the Order of the Special Characters
+    for (let i = 0; i < 20; i++) {
+      let numberChar = numberPassOptions.charAt(Math.floor(Math.random() * 20));
+      numberPassword = (numberChar + numberPassword);
+    }
+    // Else Statement for if NO Numbers are Wanted
+  } else {
+    alert("Your password will not have any numbers");
+  }
+
+  console.log(numberPassword);
+
+
+
   return (buttonPress)
 }
