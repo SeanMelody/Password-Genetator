@@ -128,13 +128,6 @@ function promptBtn() {
       }
 
 
-
-      // var passLength = prompt("How long would you like your password to be (must be between 8 and 128 characters?");
-      // if (passLength >= 8 && passLength <= 128) {
-      //   alert(`Your password is going to be ${passLength} characters long`);
-      // } else {
-      //   alert("Must choose a length between 8 and 128 characters");
-      // }
       var password = ""
       for (let i = 0; i < passLength; i++) {
         let randomized = combined.charAt(Math.floor(Math.random() * combinedLength));
@@ -145,18 +138,48 @@ function promptBtn() {
       document.getElementById("password").textContent = password;
       document.getElementById("password").style.fontSize = "30px";
       document.getElementById("password").style.padding = "50px";
-      document.getElementById("password").style.color = "blue";
+      document.getElementById("password").style.color = "black";
+      document.getElementById("password").style.backgroundColor = "darkred"
 
     } else {
       let noPassword = "No password criteria selected.  Please try again"
       document.getElementById("password").textContent = noPassword
-      document.getElementById("password").style.fontSize = "30px";
-      document.getElementById("password").style.padding = "30px";
+      document.getElementById("password").style.fontSize = "20px";
       document.getElementById("password").style.color = "black";
     }
   } else {
     alert("Must choose a length between 8 and 128 characters");
   }
-}
-return (buttonPress)
 
+
+  // var passLength = prompt("How long would you like your password to be (must be between 8 and 128 characters?");
+  // if (passLength >= 8 && passLength <= 128) {
+  //   alert(`Your password is going to be ${passLength} characters long`);
+  //   document.getElementById("password").textContent = password;
+  //   document.getElementById("password").style.fontSize = "40px";
+  //   document.getElementById("password").style.padding = "50px";
+  //   document.getElementById("password").style.color = "blue";
+  // } else {
+  //   alert("Must choose a length between 8 and 128 characters");
+  // }
+
+
+  // }
+
+
+
+
+
+  // Else Statement for if ANY criteria selected to Make the password
+
+  // Empty String for the Password
+  // var password = ""
+  // For Loop To Randomize the chosen Options and Make the Correct Lenfth
+  // for (let i = 0; i < passLength; i++) {
+  //   let randomized = combined.charAt(Math.floor(Math.random() * combinedLength));
+  //   password = (password + randomized)
+  // }
+
+
+  return (buttonPress)
+}
