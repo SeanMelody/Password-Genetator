@@ -33,7 +33,7 @@ function promptBtn() {
       upperPassword = (upperPassword + upperChar);
     }
   } else {
-    // Else Statement for if NO Uppercase letter is Wanted
+    // Else Statement for if NO Uppercase letter are Wanted
     alert("Your password will not have any uppercase letters");
   }
 
@@ -55,13 +55,32 @@ function promptBtn() {
       let lowerChar = lowerCharOptions.charAt(Math.floor(Math.random() * 26));
       lowerPassword = (lowerChar + lowerPassword);
     }
-    // Else Statement for if NO Lowercase letter is Wanted
+    // Else Statement for if NO Lowercase letter are Wanted
   } else {
-    alert("Your password will not have any lower case letters");
+    alert("Your password will not have any lowercase letters");
   }
 
   console.log(lowerPassword);
 
+  // Symbols
 
+  // Create and Empty String to have Special Character Options
+  var symbolPassword = ""
+  // Confirm for an alert asking if you want Special Character Options
+  let symbolChar = confirm("Would you like your password to contain special characters?");
+  // If Statement for if they Want Special Character Options, and then Randomize Those Letters
+  if (symbolChar === true) {
+    let symbolPassOptions = "!/#$%&'()*+,-./:;<=>?@[\]^_`{|}~) {}";
+    // Randomize the Order of the Special Characters
+    for (let i = 0; i < 36; i++) {
+      let symbolChar = symbolPassOptions.charAt(Math.floor(Math.random() * 36));
+      symbolPassword = (symbolChar + symbolPassword);
+    }
+    // Else Statement for if NO Special Characters are Wanted
+  } else {
+    alert("Your password will not have a special character");
+  }
+
+  console.log(symbolPassword);
   return (buttonPress)
 }
