@@ -3,10 +3,14 @@
 
 <head>
   <meta charset="UTF-8" />
+  <!-- Meta Tag for Page Width -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="./assets/style.css" />
+  <!-- Favicon Link -->
+  <link rel="icon" type="image/png" href="./assets/Favicon.png" />
   <title>Password Generator</title>
-  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -14,6 +18,7 @@
     <header>
       <h1>Password Generator</h1>
     </header>
+    <!-- Password Generator Box -->
     <div class="card">
       <div class="card-header">
         <h2>Generate a Password</h2>
@@ -22,10 +27,12 @@
         <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
       </div>
       <div class="card-footer">
+        <!-- Onclick button makes the prompts run in javascript once clicked -->
         <button id="generate" onclick="promptBtn()" class="btn">Generate Password</button>
       </div>
     </div>
   </div>
+  <!-- Javascript Link -->
   <script src="script.js"></script>
 </body>
 

@@ -12,3 +12,15 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+function promptBtn() {
+  let buttonPress = alert("Let's make a Password!");
+
+
+
+
+
+
+  return (buttonPress)
+}
