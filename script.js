@@ -29,7 +29,7 @@ function promptBtn() {
     }
 
 
-    console.log(upperPassword);
+
 
 
     // LowerCase Letters
@@ -51,7 +51,7 @@ function promptBtn() {
       alert("Your password will not have any lowercase letters");
     }
 
-    console.log(lowerPassword);
+
 
     // Symbols
 
@@ -72,7 +72,7 @@ function promptBtn() {
       alert("Your password will not have a special character");
     }
 
-    console.log(symbolPassword);
+
 
 
     // Numbers
@@ -94,13 +94,12 @@ function promptBtn() {
       alert("Your password will not have any numbers");
     }
 
-    console.log(numberPassword);
+
 
     // Combine the Passwords to Make One Long Password with Selected Criteria
     var combined = (upperPassword + lowerPassword + symbolPassword + numberPassword);
     var combinedLength = (combined.length);
 
-    console.log(combined);
 
     // If statement for if characters ARE picked gets us to the next step
     if (combined !== "") {
@@ -113,11 +112,10 @@ function promptBtn() {
         password = (password + randomized)
       }
 
-      console.log(password)
+
       // Printing Password to the page and changing color and text size of box
       document.getElementById("password").textContent = password;
-      document.getElementById("password").style.fontSize = "30px";
-      document.getElementById("password").style.padding = "50px";
+      document.getElementById("password").style.fontSize = "20px";
       document.getElementById("password").style.color = "white";
       document.getElementById("password").style.backgroundColor = "darkred"
 
