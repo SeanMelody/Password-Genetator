@@ -7,8 +7,6 @@ function promptBtn() {
     alert(`Your password is going to be ${passLength} characters long`);
     // Else Statement at End of Function IF they did not pick the right number of Characters
 
-
-
     //  UpperCaseLetters
 
     // Create and Empty String to have Uppercase Password Options
@@ -27,10 +25,6 @@ function promptBtn() {
       // Else Statement for if NO Uppercase letter are Wanted
       alert("Your password will not have any uppercase letters");
     }
-
-
-
-
 
     // LowerCase Letters
 
@@ -51,8 +45,6 @@ function promptBtn() {
       alert("Your password will not have any lowercase letters");
     }
 
-
-
     // Symbols
 
     // Create and Empty String to have Special Character Options
@@ -71,9 +63,6 @@ function promptBtn() {
     } else {
       alert("Your password will not have a special character");
     }
-
-
-
 
     // Numbers
 
@@ -94,12 +83,9 @@ function promptBtn() {
       alert("Your password will not have any numbers");
     }
 
-
-
     // Combine the Passwords to Make One Long Password with Selected Criteria
     var combined = (upperPassword + lowerPassword + symbolPassword + numberPassword);
     var combinedLength = (combined.length);
-
 
     // If statement for if characters ARE picked gets us to the next step
     if (combined !== "") {
@@ -111,7 +97,6 @@ function promptBtn() {
         let randomized = combined.charAt(Math.floor(Math.random() * combinedLength));
         password = (password + randomized)
       }
-
 
       // Printing Password to the page and changing color and text size of box
       document.getElementById("password").textContent = password;
